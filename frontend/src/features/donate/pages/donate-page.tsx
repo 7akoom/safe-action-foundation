@@ -74,17 +74,22 @@ export function DonatePage({
 
                 <div className="mt-5 space-y-3 text-slate-700">
                   <p>
-                    <span className="font-black">Bank:</span> Safe Action Bank
+                    <span className="font-black">
+                      {isArabic ? 'البنك:' : 'Bank:'}
+                    </span>{' '}
+                    {isArabic ? 'بنك البركة سوريا' : 'Al Baraka Bank Syria'}
                   </p>
 
                   <p>
-                    <span className="font-black">IBAN:</span>{' '}
-                    <span dir="ltr">SA123456789000000</span>
+                    <span className="font-black">
+                      {isArabic ? 'رقم الحساب:' : 'Account Number:'}
+                    </span>{' '}
+                    <span dir="ltr">7006588</span>
                   </p>
 
                   <p>
                     <span className="font-black">SWIFT:</span>{' '}
-                    <span dir="ltr">SAFACTION</span>
+                    <span dir="ltr">BBSYSYDA</span>
                   </p>
                 </div>
               </div>
@@ -96,11 +101,12 @@ export function DonatePage({
 
                 <div className="mt-5 space-y-3 text-slate-700">
                   <p>{settings?.email}</p>
-                    <div className={isArabic ? 'text-right' : 'text-left'}>
-                        <p className="inline-block" dir="ltr">
-                            {settings?.phone}
-                        </p>
-                    </div>
+
+                  <div className={isArabic ? 'text-right' : 'text-left'}>
+                    <p className="inline-block" dir="ltr">
+                      {settings?.phone}
+                    </p>
+                  </div>
                 </div>
               </div>
             </div>
